@@ -1,5 +1,5 @@
-# Project Name
-
+# Project Name : School finder
+Technology used: Node js + Sql +Drizzle orm
 ## Description
 This project provides a basic API that handles school-related requests. The `GET` and `POST` requests are sent to the `Schools` endpoint, and currently, there is no differentiation between the two operations for listing and adding schools. Both `GET` and `POST` requests are processed through the same endpoint.
 
