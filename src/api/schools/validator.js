@@ -1,7 +1,7 @@
 import { body, query, validationResult } from 'express-validator';
 import { ApiError } from '../../middleware/errorhandler.js';
 
-// Validation rules for adding a new school
+
 export const validateAddSchool = [
   body('name')
     .trim()
@@ -21,7 +21,7 @@ export const validateAddSchool = [
     .notEmpty().withMessage('Longitude is required')
     .isFloat({ min: -180, max: 180 }).withMessage('Longitude must be between -180 and 180'),
   
-  // Middleware to handle validation errors
+
   (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -32,7 +32,7 @@ export const validateAddSchool = [
   }
 ];
 
-// Validation rules for listing schools with proximity
+
 export const validateListSchools = [
   query('latitude')
     .optional()
@@ -42,7 +42,7 @@ export const validateListSchools = [
     .optional()
     .isFloat({ min: -180, max: 180 }).withMessage('Longitude must be between -180 and 180'),
   
-  // If latitude is provided, longitude must also be provided and vice versa
+ 
   (req, res, next) => {
     const { latitude, longitude } = req.query;
     

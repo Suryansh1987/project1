@@ -2,7 +2,7 @@ import { migrate } from 'drizzle-orm/neon-serverless/migrator';
 import { db } from './index.js';
 import 'dotenv/config';
 
-// Run migrations
+
 const runMigrations = async () => {
   try {
     console.log('Running migrations...');

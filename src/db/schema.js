@@ -1,6 +1,6 @@
 import { pgTable, serial, varchar, decimal, timestamp } from 'drizzle-orm/pg-core';
 
-// Define the schools table
+
 export const schools = pgTable('schools', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 100 }).notNull(),
